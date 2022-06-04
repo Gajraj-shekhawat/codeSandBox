@@ -7,6 +7,9 @@ const rootReducer = combineReducers({
   counter: countReducer
 });
 
-export const store = legacy_createStore(rootReducer);
+export const store = legacy_createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 // console.log(store)
